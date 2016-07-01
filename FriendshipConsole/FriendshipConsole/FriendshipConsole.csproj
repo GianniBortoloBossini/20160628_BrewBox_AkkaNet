@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95E1B366-DA51-4B80-BDD7-52BECAE7520C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FriendshipConsole</RootNamespace>
+    <AssemblyName>FriendshipConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Akka">
+      <HintPath>..\packages\Akka.1.0.8\lib\net45\Akka.dll</HintPath>
+    </Reference>
+    <Reference Include="Akka.Serialization.Wire">
+      <HintPath>..\packages\Akka.Serialization.Wire.1.0.8.25-beta\lib\net45\Akka.Serialization.Wire.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\packages\System.Collections.Immutable.1.1.36\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Wire">
+      <HintPath>..\packages\Wire.0.0.6\lib\Wire.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actors\ApplicationActor.cs" />
+    <Compile Include="Actors\IO\InputActor.cs" />
+    <Compile Include="Actors\IOActor.cs" />
+    <Compile Include="Actors\IO\OutputActor.cs" />
+    <Compile Include="Actors\FriendActor.cs" />
+    <Compile Include="Actors\OwnerActor.cs" />
+    <Compile Include="Actors\Steps\AddFriendActor.cs" />
+    <Compile Include="Actors\Steps\ExitActor.cs" />
+    <Compile Include="Actors\Steps\ForwardGreetingActor.cs" />
+    <Compile Include="Actors\Steps\ForwardGreetingError.cs" />
+    <Compile Include="Actors\Steps\GreetFriendActor.cs" />
+    <Compile Include="Actors\Steps\GreetAllFriendsActor.cs" />
+    <Compile Include="Actors\Steps\RememberFriendsActor.cs" />
+    <Compile Include="Actors\Steps\RemoveAllFriendsActor.cs" />
+    <Compile Include="Actors\Steps\RemoveFriendActor.cs" />
+    <Compile Include="Actors\Steps\StepActor.cs" />
+    <Compile Include="Choices.cs" />
+    <Compile Include="Friend.cs" />
+    <Compile Include="Friends.cs" />
+    <Compile Include="Messages\AddFriend.cs" />
+    <Compile Include="Messages\AddFriendCompleted.cs" />
+    <Compile Include="Messages\AddFriendError.cs" />
+    <Compile Include="Messages\AddFriendSuccesfully.cs" />
+    <Compile Include="Messages\BlameMe.cs" />
+    <Compile Include="Messages\BlameMeTo.cs" />
+    <Compile Include="Messages\ByeByeOwner.cs" />
+    <Compile Include="Messages\Command\ClearOutput.cs" />
+    <Compile Include="Messages\AddFriendShowIntro.cs" />
+    <Compile Include="Messages\Command\GoToStep.cs" />
+    <Compile Include="Messages\Command\ReadUserInput.cs" />
+    <Compile Include="Messages\Command\ShowMenu.cs" />
+    <Compile Include="Messages\Command\CreateOwnerShowMessageAfter.cs" />
+    <Compile Include="Messages\Command\CreateOwnerShowMessageBefore.cs" />
+    <Compile Include="Messages\Command\ShowWelcome.cs" />
+    <Compile Include="Messages\Command\CreateOwner.cs" />
+    <Compile Include="Messages\Command\ShowWrongChoiceMessage.cs" />
+    <Compile Include="Messages\Command\WhatIsYourName.cs" />
+    <Compile Include="Messages\Document\ReadUserInputResult.cs" />
+    <Compile Include="Messages\Event\CreateOwnerShowMessageAfterCompleted.cs" />
+    <Compile Include="Messages\Event\CreateOwnerShowMessageBeforeCompleted.cs" />
+    <Compile Include="Messages\Event\ExitSelected.cs" />
+    <Compile Include="Messages\Event\MenuCompleted.cs" />
+    <Compile Include="Messages\Event\ShowMenuShowMessageBeforeCompleted.cs" />
+    <Compile Include="Messages\Event\ShowWelcomeCompleted.cs" />
+    <Compile Include="Messages\Event\CreateOwnerCompleted.cs" />
+    <Compile Include="Messages\Event\ShowWrongChoiceCompleted.cs" />
+    <Compile Include="Messages\AddFriendShowIntroCompleted.cs" />
+    <Compile Include="Messages\ForwardGreetingAskTo.cs" />
+    <Compile Include="Messages\ForwardGreetingAskToCompleted.cs" />
+    <Compile Include="Messages\ForwardGreetingSuccesfully.cs" />
+    <Compile Include="Messages\ForwardGreetingTo.cs" />
+    <Compile Include="Messages\ForwardGreetingShowIntro.cs" />
+    <Compile Include="Messages\ForwardGreetingShowIntroCompleted.cs" />
+    <Compile Include="Messages\ForwardGreetingToWithOwner.cs" />
+    <Compile Include="Messages\GreetAllFriends.cs" />
+    <Compile Include="Messages\GreetAllFriendsError.cs" />
+    <Compile Include="Messages\GreetFriend.cs" />
+    <Compile Include="Messages\GreetFriendCompleted.cs" />
+    <Compile Include="Messages\GreetFriendError.cs" />
+    <Compile Include="Messages\GreetFriendFrom.cs" />
+    <Compile Include="Messages\GreetFriendShowIntro.cs" />
+    <Compile Include="Messages\GreetFriendShowIntroCompleted.cs" />
+    <Compile Include="Messages\GreetFriendSuccesfully.cs" />
+    <Compile Include="Messages\GreetFriendTo.cs" />
+    <Compile Include="Messages\RememberFriends.cs" />
+    <Compile Include="Messages\RememberFriendsCompleted.cs" />
+    <Compile Include="Messages\RememberFriendsError.cs" />
+    <Compile Include="Messages\RememberFriendsShowIntro.cs" />
+    <Compile Include="Messages\RememberFriendsShowIntroCompleted.cs" />
+    <Compile Include="Messages\RememberFriendsSuccesfully.cs" />
+    <Compile Include="Messages\RemoveAllFriends.cs" />
+    <Compile Include="Messages\RemoveAllFriendsCompleted.cs" />
+    <Compile Include="Messages\RemoveAllFriendsError.cs" />
+    <Compile Include="Messages\RemoveAllFriendsShowIntro.cs" />
+    <Compile Include="Messages\RemoveAllFriendsShowIntroCompleted.cs" />
+    <Compile Include="Messages\RemoveAllFriendsSuccesfully.cs" />
+    <Compile Include="Messages\RemoveFriend.cs" />
+    <Compile Include="Messages\RemoveFriendCompleted.cs" />
+    <Compile Include="Messages\RemoveFriendError.cs" />
+    <Compile Include="Messages\RemoveFriendShowIntro.cs" />
+    <Compile Include="Messages\RemoveFriendShowIntroCompleted.cs" />
+    <Compile Include="Messages\RemoveFriendSuccesfully.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

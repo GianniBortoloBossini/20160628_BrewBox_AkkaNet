@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.IoT.Sensor", "Akka.IoT.Sensor\Akka.IoT.Sensor.csproj", "{8C5ECEFA-E2A3-41BC-8D19-B53254D973C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MQTT", "MQTT", "{40C97B8C-EE3C-4DDD-BBE0-8CAEFF22A971}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.IoT.App", "Akka.IoT.App\Akka.IoT.App.csproj", "{EB4B0CB5-0970-48F3-BD09-AB13E9DC83DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.IoT.MQTT.Infrastructure", "Akka.IoT.MQTT.Infrastructure\Akka.IoT.MQTT.Infrastructure.csproj", "{B0412D86-88CB-4CCD-8CF1-70E00D5A3AAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.IoT.Infrastructure", "Akka.IoT.Infrastructure\Akka.IoT.Infrastructure.csproj", "{E607FFE4-97EB-4FEA-BD86-124BD35FAD69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.IoT.RestApi", "Akka.IoT.RestApi\Akka.IoT.RestApi.csproj", "{08AEFB92-FA2A-477B-AE67-62D213F3A6A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.IoT.Shared", "Akka.IoT.Shared\Akka.IoT.Shared.csproj", "{B0DAB5B3-774D-490F-90C0-F63CA43BC38B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C5ECEFA-E2A3-41BC-8D19-B53254D973C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C5ECEFA-E2A3-41BC-8D19-B53254D973C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C5ECEFA-E2A3-41BC-8D19-B53254D973C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C5ECEFA-E2A3-41BC-8D19-B53254D973C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB4B0CB5-0970-48F3-BD09-AB13E9DC83DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB4B0CB5-0970-48F3-BD09-AB13E9DC83DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB4B0CB5-0970-48F3-BD09-AB13E9DC83DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB4B0CB5-0970-48F3-BD09-AB13E9DC83DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0412D86-88CB-4CCD-8CF1-70E00D5A3AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0412D86-88CB-4CCD-8CF1-70E00D5A3AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0412D86-88CB-4CCD-8CF1-70E00D5A3AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0412D86-88CB-4CCD-8CF1-70E00D5A3AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E607FFE4-97EB-4FEA-BD86-124BD35FAD69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E607FFE4-97EB-4FEA-BD86-124BD35FAD69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E607FFE4-97EB-4FEA-BD86-124BD35FAD69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E607FFE4-97EB-4FEA-BD86-124BD35FAD69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08AEFB92-FA2A-477B-AE67-62D213F3A6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08AEFB92-FA2A-477B-AE67-62D213F3A6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08AEFB92-FA2A-477B-AE67-62D213F3A6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08AEFB92-FA2A-477B-AE67-62D213F3A6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0DAB5B3-774D-490F-90C0-F63CA43BC38B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0DAB5B3-774D-490F-90C0-F63CA43BC38B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0DAB5B3-774D-490F-90C0-F63CA43BC38B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0DAB5B3-774D-490F-90C0-F63CA43BC38B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8C5ECEFA-E2A3-41BC-8D19-B53254D973C7} = {40C97B8C-EE3C-4DDD-BBE0-8CAEFF22A971}
+		{B0412D86-88CB-4CCD-8CF1-70E00D5A3AAE} = {40C97B8C-EE3C-4DDD-BBE0-8CAEFF22A971}
+	EndGlobalSection
+EndGlobal

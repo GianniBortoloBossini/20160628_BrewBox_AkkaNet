@@ -1,0 +1,108 @@
+﻿<Window x:Class="Akka.IoT.Sensor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="190" Width="390"
+        Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Name="lblDeviceId" 
+               Content="Device ID:" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Center"
+               Grid.Column="0"/>
+        <TextBox Name="txtDeviceId" 
+                 HorizontalContentAlignment="Center" 
+                 Text="" 
+                 VerticalContentAlignment="Center" 
+                 VerticalAlignment="Center"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Margin="0,0,10,0"/>
+
+        <Label Name="lblDeviceType" 
+               Content="Device Type:" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Center"
+               Grid.Column="0"
+               Grid.Row="1"/>
+        <ComboBox Name="cmbDeviceType" 
+                  HorizontalAlignment="Left" 
+                  VerticalAlignment="Center"
+                  Grid.Row="1"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="2">
+            <ComboBoxItem IsSelected="True">Light</ComboBoxItem>
+            <ComboBoxItem>Gate</ComboBoxItem>
+            <ComboBoxItem>Door</ComboBoxItem>
+            <ComboBoxItem>Device</ComboBoxItem>
+        </ComboBox>
+        
+        <Label Name="lblDeviceGroup" 
+               Content="Device group:" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Center"
+               Grid.Row="2"/>
+        <ComboBox x:Name="cmbGroup" 
+                  HorizontalAlignment="Left" 
+                  VerticalAlignment="Top" 
+                  SelectionChanged="CmbDeviceCategory_OnSelectionChanged" 
+                  Grid.Row="2"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="2">
+            <ComboBoxItem IsSelected="True" Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+        </ComboBox>
+
+        <Label Name="lblDeviceName" 
+               Content="Device name:" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Center"
+               Grid.Row="3"/>
+        <TextBox Name="txtDeviceName" 
+                 HorizontalContentAlignment="Center" 
+                 Text="" 
+                 VerticalContentAlignment="Center" 
+                 VerticalAlignment="Center"
+                 Grid.Row="3"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Margin="0,0,10,0"/>
+
+        <Button Name="btnConnect" 
+                HorizontalContentAlignment="Stretch"
+                Margin="5,5,5,5"
+                Click="BtnConnect_OnClick"
+                Grid.Column="0"
+                Grid.Row="4">Connect</Button>
+        <Button Name="btnOnOff" 
+                Margin="5,5,5,5"
+                IsEnabled="False" 
+                HorizontalContentAlignment="Stretch"
+                VerticalAlignment="Center" 
+                Click="BtnOnOff_OnClick"
+                Grid.Column="1" 
+                Grid.Row="4">ON</Button>
+        <Button Name="btnDisconnect" 
+                IsEnabled="False" 
+                Margin="5,5,5,5"
+                HorizontalContentAlignment="Stretch" 
+                VerticalAlignment="Center" 
+                Click="BtnDisconnect_OnClick"
+                Grid.Row="4"
+                Grid.Column="2">Disconnect</Button>
+    </Grid>
+</Window>
